@@ -1,0 +1,23 @@
+{
+  "name": "odin-etch-a-sketch",
+  "version": "1.0.0",
+  "description": "In this project, you’ll be creating a pretty neat toy to flex your DOM manipulation skills. You’re going to build a browser version of something between a sketchpad and an Etch-A-Sketch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synnestorm/odin-etch-a-sketch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synnestorm/odin-etch-a-sketch/issues"
+  },
+  "homepage": "https://github.com/synnestorm/odin-etch-a-sketch#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
