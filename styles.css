@@ -2,5 +2,21 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: pink;
+  background-color: whitesmoke;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.div-containers {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
 }
