@@ -10,16 +10,21 @@ promptButton.className = "prompt-btn";
 promptButton.innerHTML = "New Grid";
 document.body.appendChild(promptButton);
 
-// this is the logic for the 16x16 grid of divs
-for (let i = 0; i < 256; i++) {
-  const div = document.createElement("div");
-  div.className = "div-containers";
-  container?.appendChild(div);
+let userInput: number = 16;
 
-  div.addEventListener("mouseover", function () {
-    div.style.backgroundColor = randomColor();
-  });
+// this is the logic for the 16x16 grid of divs
+function generateGrid() {
+  for (let i = 0; i < userInput * userInput; i++) {
+    const div = document.createElement("div");
+    div.className = "div-containers";
+    container?.appendChild(div);
+
+    div.addEventListener("mouseover", function () {
+      div.style.backgroundColor = randomColor();
+    });
+  }
 }
+generateGrid();
 
 // function to get a random color when hovering over divs
 function randomColor() {
@@ -40,7 +45,6 @@ resetButton.addEventListener("click", function () {
 });
 
 promptButton.addEventListener("click", function () {
-  let userInput: number = 1;
   do {
     const promptMessage = prompt("Please enter a number between 1-100!");
 
