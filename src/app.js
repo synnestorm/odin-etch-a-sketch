@@ -35,6 +35,7 @@ resetButton.addEventListener("click", function () {
         div.style.backgroundColor = "#FFFFFF";
     });
 });
+// prompt button to make the user change grid, will clear existing grid and create a new one
 promptButton.addEventListener("click", function () {
     do {
         const promptMessage = prompt("Please enter a number between 1-100!");
@@ -50,6 +51,7 @@ promptButton.addEventListener("click", function () {
         }
     } while (!Number.isInteger(userInput) || userInput < 1 || userInput > 100);
     container.innerHTML = "";
+    generateGrid();
 });
 export {};
 //# sourceMappingURL=app.js.map
