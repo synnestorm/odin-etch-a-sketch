@@ -8,6 +8,8 @@ resetButton.innerHTML = "Reset";
 document.body.appendChild(resetButton);
 const promptButton = document.createElement("button");
 promptButton.className = "prompt-btn";
+promptButton.innerHTML = "New Grid";
+document.body.appendChild(promptButton);
 
 // this is the logic for the 16x16 grid of divs
 for (let i = 0; i < 256; i++) {
@@ -32,5 +34,9 @@ function randomColor() {
 
 resetButton.addEventListener("click", function () {
   console.log("yooo im clicked");
+});
+
+promptButton.addEventListener("click", function () {
+  console.log("heey im clicked too!!");
 });
 // change the grid button, 1-100
