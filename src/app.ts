@@ -1,14 +1,25 @@
 // fetching/creating from the DOM
 const container = document.querySelector<HTMLDivElement>("#container");
 
+const header = document.createElement("header");
+container!.before(header);
+
+const heading = document.createElement("h1");
+heading.className = "heading";
+heading.textContent = "Etch-A-Sketch";
+header.appendChild(heading);
+
+const btnContainer = document.createElement("div");
+btnContainer.className = "btn-container";
+header.appendChild(btnContainer);
 const resetButton = document.createElement("button");
 resetButton.className = "reset-btn";
 resetButton.textContent = "Reset";
-document.body.appendChild(resetButton);
+btnContainer.appendChild(resetButton);
 const promptButton = document.createElement("button");
 promptButton.className = "prompt-btn";
 promptButton.textContent = "New Grid";
-document.body.appendChild(promptButton);
+btnContainer.appendChild(promptButton);
 
 let userInput: number = 16;
 
@@ -20,7 +31,7 @@ function generateGrid() {
     div.className = "div-containers";
     div.style.width = `${divSize}px`;
     div.style.height = `${divSize}px`;
-    container?.appendChild(div);
+    container!.appendChild(div);
 
     div.addEventListener("mouseover", function () {
       div.style.backgroundColor = randomColor();
