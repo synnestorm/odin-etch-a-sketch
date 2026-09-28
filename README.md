@@ -2,6 +2,8 @@
 
 In this assignment I were to create a Etch-a-Sketch to use my skills in DOM manipulation. I was tasked to build a browser version of something between a sketchpad and an Etch-A-Sketch.
 
+Disclaimer: This project is made with TypeScript because I am currently learning it. It is not part of the project to do that.
+
 ## Built with
 
 - HTML5
