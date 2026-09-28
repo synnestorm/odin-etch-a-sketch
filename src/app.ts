@@ -40,6 +40,12 @@ resetButton.addEventListener("click", function () {
 });
 
 promptButton.addEventListener("click", function () {
-  console.log("heey im clicked too!!");
+  const newGridPrompt = Number(prompt("Enter a number between 1-100!"));
+  const userInput: number = newGridPrompt;
+
+  if (Number.isInteger(userInput) && userInput >= 1 && userInput <= 100) {
+    console.log("its an integer!");
+  } else {
+    alert("Please enter a valid number!");
+  }
 });
-// change the grid button, 1-100
