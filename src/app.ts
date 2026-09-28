@@ -1,6 +1,5 @@
 // fetching/creating from the DOM
 const container = document.querySelector<HTMLDivElement>("#container");
-const btnContainer = document.querySelector<HTMLDivElement>("#btnContainer");
 
 const resetButton = document.createElement("button");
 resetButton.className = "reset-btn";
@@ -33,7 +32,11 @@ function randomColor() {
 // reset button, to reset the sketch
 
 resetButton.addEventListener("click", function () {
-  console.log("yooo im clicked");
+  const divs = container?.querySelectorAll<HTMLElement>(".div-containers");
+
+  divs?.forEach(function (div) {
+    div.style.backgroundColor = "#FFFFFF";
+  });
 });
 
 promptButton.addEventListener("click", function () {

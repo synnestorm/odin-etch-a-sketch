@@ -1,13 +1,12 @@
 // fetching/creating from the DOM
 const container = document.querySelector("#container");
-const btnContainer = document.querySelector("#btnContainer");
 const resetButton = document.createElement("button");
 resetButton.className = "reset-btn";
 resetButton.innerHTML = "Reset";
 document.body.appendChild(resetButton);
 const promptButton = document.createElement("button");
 promptButton.className = "prompt-btn";
-promptButton.innerHTML = "New grid";
+promptButton.innerHTML = "New Grid";
 document.body.appendChild(promptButton);
 // this is the logic for the 16x16 grid of divs
 for (let i = 0; i < 256; i++) {
@@ -27,7 +26,10 @@ function randomColor() {
 }
 // reset button, to reset the sketch
 resetButton.addEventListener("click", function () {
-    console.log("yooo im clicked");
+    const divs = container?.querySelectorAll(".div-containers");
+    divs?.forEach(function (div) {
+        div.style.backgroundColor = "#FFFFFF";
+    });
 });
 promptButton.addEventListener("click", function () {
     console.log("heey im clicked too!!");
