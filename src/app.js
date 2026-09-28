@@ -32,14 +32,21 @@ resetButton.addEventListener("click", function () {
     });
 });
 promptButton.addEventListener("click", function () {
-    const newGridPrompt = Number(prompt("Enter a number between 1-100!"));
-    const userInput = newGridPrompt;
-    if (Number.isInteger(userInput) && userInput >= 1 && userInput <= 100) {
-        console.log("its an integer!");
-    }
-    else {
-        alert("Please enter a valid number!");
-    }
+    let userInput = 1;
+    do {
+        const promptMessage = prompt("Please enter a number between 1-100!");
+        if (promptMessage === null) {
+            return;
+        }
+        const newGridPrompt = Number(promptMessage);
+        userInput = newGridPrompt;
+        if (Number.isInteger(userInput) && userInput >= 1 && userInput <= 100) {
+            console.log("its an integer!");
+        }
+        else {
+            alert("Please enter a valid number!");
+        }
+    } while (!Number.isInteger(userInput) || userInput < 1 || userInput > 100);
 });
 export {};
 //# sourceMappingURL=app.js.map
