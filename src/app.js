@@ -41,12 +41,12 @@ promptButton.addEventListener("click", function () {
         const newGridPrompt = Number(promptMessage);
         userInput = newGridPrompt;
         if (Number.isInteger(userInput) && userInput >= 1 && userInput <= 100) {
-            console.log("its an integer!");
         }
         else {
             alert("Please enter a valid number!");
         }
     } while (!Number.isInteger(userInput) || userInput < 1 || userInput > 100);
+    container.innerHTML = "";
 });
 export {};
 //# sourceMappingURL=app.js.map
