@@ -3,20 +3,23 @@ const container = document.querySelector<HTMLDivElement>("#container");
 
 const resetButton = document.createElement("button");
 resetButton.className = "reset-btn";
-resetButton.innerHTML = "Reset";
+resetButton.textContent = "Reset";
 document.body.appendChild(resetButton);
 const promptButton = document.createElement("button");
 promptButton.className = "prompt-btn";
-promptButton.innerHTML = "New Grid";
+promptButton.textContent = "New Grid";
 document.body.appendChild(promptButton);
 
 let userInput: number = 16;
 
 // this is the logic for the 16x16 grid of divs
 function generateGrid() {
+  const divSize = 600 / userInput;
   for (let i = 0; i < userInput * userInput; i++) {
     const div = document.createElement("div");
     div.className = "div-containers";
+    div.style.width = `${divSize}px`;
+    div.style.height = `${divSize}px`;
     container?.appendChild(div);
 
     div.addEventListener("mouseover", function () {
